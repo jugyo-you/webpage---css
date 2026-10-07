@@ -1,0 +1,617 @@
+html {
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    color: #4e595e;
+    background: #fff;
+}
+
+
+/* opening =========================================================*/
+#opening {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: openingFadeOut 1s ease 4.2s forwards;
+}
+
+.opening_logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+
+    animation: eagleAnimation 4s ease-in-out forwards;
+}
+
+@keyframes eagleAnimation {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    75% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes openingFadeOut {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+
+/* オープニング以外=========================================================== */
+
+.header {
+    width: 100%;
+    background: #fff;
+}
+
+.header_inner {
+    width: 100%;
+    min-height: 150px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.school_logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #253a49;
+    text-decoration: none;
+}
+
+.logo_element {
+    width: 110px;
+    height: 92px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.school_name {
+    margin-left: 16px;
+}
+
+.name1 {
+    color: #253a49;
+    font-size: 25px;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+}
+
+.name2 {
+    color: #253a49;
+    font-size: 35px;
+    line-height: 1.05;
+    letter-spacing: 0.05em;
+}
+
+
+.global_nav {
+    margin-left: auto;
+    margin-right: 30px;
+    transform: translate(-20px, 10px);
+}
+
+/* めにゅーんとこ================================================= */
+
+.header_menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.header_menu li {
+    margin-left: 40px;
+}
+
+.header_menu li a {
+    position: relative;
+    color: #253a49;
+    font-size: 20px;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header_menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    background: #607d8b;
+    transition: width 0.3s ease;
+}
+
+.header_menu li a:hover {
+    color: #607d8b;
+}
+
+.header_menu li a:hover::after {
+    width: 100%;
+}
+
+
+
+
+#hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter:
+        saturate(0.88)
+        brightness(1.03)
+        contrast(0.92);
+}
+
+.hero_fog {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(205, 222, 248, 0.28) 0%,
+            rgba(215, 228, 248, 0.18) 35%,
+            rgba(255, 255, 255, 0.05) 60%,
+            rgba(255, 255, 255, 0) 75%
+        );
+}
+
+.hero_copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 50px;
+    background-color: rgba(37, 58, 73, 0.72);
+    color: #fff;
+    font-size: 48px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+
+
+.section_inner {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.section_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.section_title span {
+    color: #253a49;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+}
+
+.section_title img {
+    width: 58px;
+    height: 58px;
+    margin-left: 22px;
+    object-fit: contain;
+}
+
+
+
+.gaiyou_section {
+    padding: 120px 0;
+    background: #fff;
+}
+
+.gaiyou_text {
+    max-width: 900px;
+    margin-bottom: 80px;
+}
+
+.gaiyou_text p {
+    margin: 0 0 25px;
+    color: #4e595e;
+    font-size: 16px;
+    line-height: 2.2;
+}
+
+
+
+/* ここまでがんばった */
+/* ========================================== */
+/* 以下は AI にある程度作ってもらって修正を自分でした */
+
+
+
+
+.principal_section {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(300px, 0.8fr);
+    gap: 70px;
+    background: #fff;
+}
+
+.principal_text h3 {
+    display: flex;
+    align-items: center;
+    margin: 0 0 35px;
+    color: #253a49;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+}
+
+.principal_text h3 span {
+    display: block;
+}
+
+.principal_text h3 img {
+    width: 58px;
+    height: 58px;
+    margin-left: 22px;
+    object-fit: contain;
+}
+
+.principal_text p {
+    margin: 0 0 22px;
+    color: #4e595e;
+    font-size: 15px;
+    line-height: 2.15;
+}
+
+.principal_image {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shanks {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+
+
+/* ==================================================================== */
+.shirase_section {
+    padding: 120px 0;
+    background: #fff;
+}
+
+.shirase_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 36px;
+}
+
+.shirase_item {
+    min-width: 0;
+}
+
+.shirase_item img {
+    display: block;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    margin-bottom: 28px;
+}
+
+.shirase_item_text h3 {
+    margin: 0 0 18px;
+    color: #253a49;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.shirase_date {
+    color: #9aa4aa;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+}
+
+
+
+/* ====================================================== */
+.access_section {
+    padding: 120px 0;
+    background: #fff;
+}
+
+.access_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+}
+
+.access_item {
+    background: #fff;
+}
+
+.access_item h3 {
+    margin: 0;
+    color: #253a49;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+}
+
+.access_line {
+    width: 70px;
+    height: 3px;
+    margin: 20px 0 30px;
+    background: #607d8b;
+}
+
+.access_item p {
+    margin: 0;
+    color: #4e595e;
+    font-size: 16px;
+    line-height: 2.1;
+}
+
+
+
+
+
+.footer {
+    background: #fff;
+    color: #253a49;
+    border-top: 1px solid #d5dde2;
+}
+
+.footer_inner {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 55px 0;
+}
+
+.footer_name {
+    margin-bottom: 15px;
+    color: #253a49;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+}
+
+.footer_address,
+.footer_tel {
+    margin-top: 8px;
+    color: #6f7b82;
+    font-size: 13px;
+}
+
+.copyright {
+    padding: 20px;
+    border-top: 1px solid #e5eaed;
+    color: #9aa4aa;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+    .header_inner {
+        min-height: 120px;
+    }
+
+    .logo_element {
+        width: 85px;
+        height: 75px;
+    }
+
+    .name1 {
+        font-size: 18px;
+    }
+
+    .name2 {
+        font-size: 25px;
+    }
+
+    .header_menu li {
+        margin-left: 20px;
+    }
+
+    .header_menu li a {
+        font-size: 16px;
+    }
+
+    .hero_copy {
+        font-size: 35px;
+
+        padding: 15px 30px;
+    }
+
+    .principal_section {
+        grid-template-columns: 1fr;
+    }
+
+    .shirase_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media (max-width: 700px) {
+    .header_inner {
+        min-height: auto;
+        padding: 18px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .school_logo {
+        width: 100%;
+    }
+
+    .logo_element {
+        width: 65px;
+        height: 60px;
+    }
+
+    .school_name {
+        margin-left: 10px;
+    }
+
+    .name1 {
+        font-size: 14px;
+    }
+
+    .name2 {
+        font-size: 18px;
+    }
+
+    .global_nav {
+        width: 100%;
+        margin: 20px 0 0;
+        transform: none;
+    }
+
+    .header_menu {
+        justify-content: space-between;
+    }
+
+    .header_menu li {
+        margin-left: 0;
+    }
+
+    .header_menu li a {
+        font-size: 13px;
+    }
+
+    .hero_copy {
+        padding: 12px 18px;
+        font-size: 23px;
+        letter-spacing: 0.08em;
+    }
+
+    .gaiyou_section,
+    .shirase_section,
+    .access_section {
+        padding: 75px 0;
+    }
+
+    .section_title {
+        margin-bottom: 40px;
+    }
+
+    .section_title span {
+        font-size: 28px;
+    }
+
+    .section_title img {
+        width: 45px;
+        height: 45px;
+        margin-left: 15px;
+    }
+
+    .gaiyou_text p {
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .principal_section {
+        gap: 40px;
+    }
+
+    .principal_text h3 {
+        font-size: 24px;
+    }
+
+    .principal_text h3 img {
+        width: 45px;
+        height: 45px;
+        margin-left: 15px;
+    }
+
+    .principal_text p {
+        font-size: 14px;
+
+        line-height: 2;
+    }
+
+    .principal_image {
+        min-height: 280px;
+    }
+
+    .shanks {
+        height: 280px;
+    }
+
+    .shirase_grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .shirase_item img {
+        height: auto;
+    }
+
+    .access_grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+    .access_item h3 {
+        font-size: 25px;
+    }
+}
